@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Deseret Book",
+    "uri": "https://deseretbook.com"
+  },
+  {
+    "name": "LDS Living",
+    "uri": "http://ldsliving.com"
+  },
+  {
+    "name": "TOFW",
+    "uri": "https://www.tofw.com"
+  },
+  {
+    "name": "GitHub",
+    "uri": "https://github.com"
+  },
+  {
+    "name": "Gitlab",
+    "uri": "https://gitlab.com"
+  },
+  {
+    "name": "Netlify",
+    "uri": "https://netlify.com"
+  },
+  {
+    "name": "Prismic.io",
+    "uri": "https://prismic.io"
+  },
+  {
+    "name": "React",
+    "uri": "https://reactjs.org/"
+  },
+  {
+    "name": "Ruby on Rails",
+    "uri": "http://rubyonrails.org/"
+  },
+  {
+    "name": "React Storybook",
+    "uri": "https://github.com/storybooks/storybook"
+  },
+  {
+    "name": "AirBnB eslint",
+    "uri": "https://github.com/airbnb/javascript"
+  },
+  {
+    "name": "Middleman",
+    "uri": "https://middlemanapp.com/"
+  }
+]
