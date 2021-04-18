@@ -38,6 +38,11 @@ import data from './data'
  * - Pagination is reusable (works with any set of data and doesn't care how contents are rendered.)
  */
 const byText = (text) => ({ name }) => name.toLowerCase().includes(text)
+const link = ({name, url}) => (
+  <li key={name}>
+    <a href={uri}>{name}</a>
+  </li>
+)
 
 const App = () => {
   const paginationAmount = 5
@@ -54,20 +59,18 @@ const App = () => {
 
   let listLength = data.length
 
+  const displayLinks = R.pipe(
+    R.filter(byText(filterText)),
+    R.tap((list) => (listLength = list.length)),
+    R.take(currentPagination),
+    R.map(link),
+  )
+
   return (
     <div>
       <input value={filterText} onChange={handleFilterUpdate}></input>
       <ul>
-        {R.pipe(
-          R.filter(byText(filterText)),
-          R.tap((list) => (listLength = list.length)),
-          R.take(currentPagination),
-          R.map((site) => (
-            <li key={site.name}>
-              <a href={site.uri}>{site.name}</a>
-            </li>
-          )),
-        )(data)}
+        {displayLinks(data)}
       </ul>
       {currentPagination < listLength ? (
         <button onClick={handleLoadMoreClick}>Load More</button>
